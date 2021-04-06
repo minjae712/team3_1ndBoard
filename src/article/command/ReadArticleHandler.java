@@ -23,7 +23,9 @@ public class ReadArticleHandler implements CommandHandler {
 			ArticleData articleData = readService.getArticle(articleNum, true);
 			// request의 articleData 속성에 게시글을 저장한다.
 			req.setAttribute("articleData", articleData);
-			return "/WEB-INF/view/main.jsp";
+			String read = "read";
+			req.setAttribute("page",read);
+			return "/main.jsp";
 			// 게시글이 존재하지 않으면 예외처리 익셉션이 발생한다면
 		} catch (ArticleNotFoundException | ArticleContentNotFoundException e) {
 			// 로그 메시지를 기록하고

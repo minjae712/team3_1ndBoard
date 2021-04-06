@@ -1,5 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,15 +11,16 @@
 		<a href="list.do?pageNo=${pageNo}">[목록]</a>
     <table border="1" style="width: 75%; position: absolute;">
         <tr>
-            <td colspan="2">제목</td>
+            <td colspan="2"><c:out value="${articleData.article.title}"></c:out></td>
         </tr>
         <tr>
             <td style="width: 30%;">작성자</td>
             <!-- 작성자 이름 -->
-            <td>name</td>
+            <td><c:out value="${articleData.article.writer.name}"></c:out></td>
         </tr>
         <tr>
-            <td colspan="2" style="height: 400px;">내용</td>
+            <td colspan="2" style="height: 400px;">
+            <u:pre value="${articleData.content}"/></td>
         </tr>
         <tr>
 		<td colspan="2">

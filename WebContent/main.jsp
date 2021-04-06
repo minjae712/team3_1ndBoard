@@ -10,15 +10,18 @@
     <h1 style="font-style: inherit;">team3 게시판</h1>
     <hr>
 	<div style="position: static;">
-		<c:if test="${no == null} ">
-		<%@ include file="/WEB-INF/view/ristArticle.jsp" %>
-		</c:if>
-		<c:if test="${no != null }">
+		<c:set var="page" value="${page}"></c:set>
+		<c:choose>
+		<c:when test="${page eq 'read'}">
 		<%@ include file="/WEB-INF/view/readArticle.jsp" %>
-		</c:if>
+		</c:when>
+		<c:otherwise>
+		<%@ include file="/WEB-INF/view/listArticle.jsp" %>
+		</c:otherwise>
+		</c:choose>
     </div>
-    <div style="position: absolute; left: 78%;  margin: 0px;">
-		<%@ include file="index.jsp" %>
+    <div style="position: absolute; left: 78%;  margin: 0px;"> 
+		<%@ include file="/index.jsp" %>
     </div>
 </body>
 </html>
