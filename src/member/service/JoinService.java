@@ -27,12 +27,10 @@ public class JoinService {
 				throw new DuplicateIdException();
 			}
 			
-			memberDao.insert(conn, 
-					new Member(
+			memberDao.insert(conn, new Member(
 							joinReq.getId(), 
 							joinReq.getName(), 
-							joinReq.getPassword(), 
-							new Date())
+							joinReq.getPassword())
 					);
 			conn.commit();
 		} catch (SQLException e) {
