@@ -6,6 +6,7 @@
 </head>
 <body>
 ${param.name}님, 회원 가입에 성공했습니다.
+<a href="${pageContext.request.contextPath}/index.jsp">[돌아가기]</a>
 <br/>
 </body>
 </html>
