@@ -1,11 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>					<!-- 코어태그를 사용하기 위해 태그라이브러리를 설정한다.--> 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.min.css">
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>게시글 목록</title>
 </head>
 <body>
@@ -26,7 +25,7 @@
 	
 	<c:forEach var="article" items="${articlePage.content}">							<!-- 게시글이 있을경우(1)[전체 게시글 객체가 0일경우 반복출력되지 않으므로 없는 행이 된다.]  -->
 	<tr>																				<!-- 3행 -->
-	<td>${article.number }</td>															<!-- 3행 1열은 article(= 전체 게시글 List)의 getNumber(= 게시글 번호)로 채운다. -->
+	<td>${article.number}</td>															<!-- 3행 1열은 article(= 전체 게시글 List)의 getNumber(= 게시글 번호)로 채운다. -->
 	<td>																				<!-- 3행 2열은 -->
 	<a href="read.do?no=${article.number}&pageNo=${articlePage.currentPage}">			<!-- read.do(readArticle.jsp)페이지[게시글 번호와 사용자의 현재 페이지를 파라미터로 받는다] -->
 	<c:out value="${article.title}" />													<!-- 로 이동하게 하고,게시글 제목 을 문자 그대로 출력하게 한다. -->

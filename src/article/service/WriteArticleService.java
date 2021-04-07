@@ -59,6 +59,6 @@ public class WriteArticleService {
 	// private으로  Article의 toArticle()메서드 활용해 writeRequeset의 날짜 및 id,pw 제목 값 리턴 가져오기
 	private Article toArticle(WriteRequest req) {
 		Date now = new Date(); // now 변수의 date()메서드의 생성자 생성
-		return new Article(null, req.getWriter(), req.getTitle(), now, now, 0);
+		return new Article(null, req.getWriter(), req.getTitle(), 0);
 	}
 }

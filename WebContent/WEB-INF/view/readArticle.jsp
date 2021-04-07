@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8"%>
+<%@ page contentType="text/html; charset=utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
 
@@ -8,6 +8,7 @@
 <title>게시글 읽기</title>
 </head>
 <body style="background: #fffcf6">
+		 	<c:set var="pageNo" value="${empty param.pageNo ? '1' : param.pageNo}" />
 		<a href="list.do?pageNo=${pageNo}">[목록]</a>
     <table border="1" style="width: 75%; position: absolute;">
         <tr>
@@ -25,7 +26,6 @@
         <tr>
 		<td colspan="2">
 			<!-- 목록으로 돌아갈 링크를 출력한다. -->
-		 	<c:set var="pageNo" value="${empty param.pageNo ? '1' : param.pageNo}" />
 			<!-- 게시글 작성자 아이디와 로그인 한 사용자 아이디가 동일하면 게시글 수정과 삭제 링크를 출력한다. -->
 		 	<c:if test="${authUser.id == articleData.article.writer.id}">
 			<a href="modify.do?no=${articleData.article.number}">[게시글수정]</a>

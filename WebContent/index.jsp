@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>		<!-- JSTL 코어 태그를 사용하기 위해 태그라이브러리 디렉티브를 구현 -->
 <%@ taglib prefix="u" tagdir="/WEB-INF/tags/" %>						<!-- 사용자 지정 태그를 사용하기 위해 태그라이브러리 디렉티브를 구현 --> 
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <title>회원제 게시판 예제</title>												<!-- index 이름 지정 -->
 </head>
 <body>

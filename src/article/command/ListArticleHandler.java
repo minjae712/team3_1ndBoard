@@ -23,7 +23,9 @@ public class ListArticleHandler implements CommandHandler {
 		ArticlePage articlePage = listService.getArticlePage(pageNo);//			멤버변수 listService의 getArticlePage메서드를 사용해 위에서 대입된 pageNo를 매개로 주어
 //																				articlePage에 대입한다.
 		req.setAttribute("articlePage", articlePage);//							그 후 request 객체 속성에 "articlePage"속성에 articlePage 변수를 주어 추가하거나 변경한다.
-		return "/WEB-INF/view/listArticle.jsp";//								반환값으로 "/WEB-INF/view/listArticle.jsp" 경로를 준다.
+		String list = "list";
+		req.setAttribute("page",list);
+		return "/main.jsp";//								반환값으로 "/WEB-INF/view/listArticle.jsp" 경로를 준다.
 	}
 
 }
