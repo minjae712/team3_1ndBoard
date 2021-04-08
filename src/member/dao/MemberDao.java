@@ -25,6 +25,7 @@ public class MemberDao {
 						rs.getString("name"), 
 						rs.getString("password"));
 			}
+
 			return member;
 		} finally {
 			JdbcUtil.close(rs);
