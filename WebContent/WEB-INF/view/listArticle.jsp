@@ -50,7 +50,7 @@
 	<li><a href="list.do?pageNo=${pNo}">${pNo}</a></li>									<!-- list.do?pageNo에서 첫 페이지[1]부터 마지막 페이지[n]까지 반복 출력후 링크를 건다. -->
 	</c:forEach>
 	<c:if test="${articlePage.endPage < articlePage.totalPages }">						<!-- 만약 마지막페이지가 전체 페이지수보다 작을 경우 --> 
-	<li><a href="list.do?pageNo=${articlePage.starPage + 5 }">다음</a></li>				<!-- [다음] 이라는 링크를 만들어 현재 보여주는 목록보다 5개 이후 목록을 볼 수 있도록 이동할 수 있게 한다. -->
+	<li><a href="list.do?pageNo=${articlePage.startPage + 5 }">다음</a></li>				<!-- [다음] 이라는 링크를 만들어 현재 보여주는 목록보다 5개 이후 목록을 볼 수 있도록 이동할 수 있게 한다. -->
 	</c:if>
 	
 	</ul>
