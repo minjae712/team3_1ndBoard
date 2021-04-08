@@ -3,9 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
 <title>게시글 읽기</title>
 </head>
 <body style="background: #fffcf6">
+    <div align="right"> 
+		<%@ include file="/index.jsp" %>
+    </div>
     <hr>
     <h1 style="font-style: inherit;">team3 게시판</h1>
     <hr>
@@ -19,9 +23,6 @@
 		<%@ include file="/WEB-INF/view/listArticle.jsp" %>
 		</c:otherwise>
 		</c:choose>
-    </div>
-    <div style="position: absolute; left: 78%;  margin: 0px;"> 
-		<%@ include file="/index.jsp" %>
     </div>
 </body>
 </html>
