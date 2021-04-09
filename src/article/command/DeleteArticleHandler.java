@@ -24,7 +24,8 @@ public class DeleteArticleHandler implements CommandHandler {
 			// int형에 변수 no를 선언하고 Integer.parseInt(noVal)로  String형의 noVal을 int형으로 변환
 			int no = Integer.parseInt(noVal);  		
 			// 폼에 보여줄 게시글을 구한다.
-			//ArticleData 클래스에 articleData변수를 선언하고, readService.getArticle(no, false) no값을 가져오고 readCount 값은 false로 조회수를 올리지 않는다.
+			//ArticleData 클래스에 articleData변수를 선언하고, 
+			//readService.getArticle(no, false) no값을 가져오고 readCount 값은 false로 조회수를 올리지 않는다.
 			ArticleData articleData = readService.getArticle(no, false);    
 			// 현재 로그인한 사용자 정보를 구한다. 
 			User authUser = (User) req.getSession().getAttribute("authUser");  
