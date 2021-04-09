@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
 <title>게시글 읽기</title>
 </head>
 <body style="background: #fffcf6">
@@ -26,4 +25,3 @@
     </div>
 </body>
 </html>
-
