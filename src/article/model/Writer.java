@@ -2,8 +2,8 @@ package article.model;
 
 public class Writer {
 	
-	private String id;
-	private String name;
+	private String id;   // 작성자 아이디
+	private String name; // 작성자 이름
 	
 	public Writer(String id, String name) {
 		this.id = id;
@@ -17,5 +17,4 @@ public class Writer {
 	public String getName() {
 		return name;
 	}
-	
 }

@@ -17,14 +17,12 @@
 	CT: ${authUser.name}님 환영합니다.										<!-- Login을 거쳐 ,Session 영역에 authUser 변수가 저장된 후, 그 변수를 불러온다. -->
 	<a href="${pageContext.request.contextPath}/logout.do">[로그아웃하기]</a><!--  앵커태그로 링크를 걸어준다.(링크는 WEB-INF/commandHandlerURI.property에서 설정한다.) -->
 	<a href="${pageContext.request.contextPath}/changePwd.do">[암호 변경하기]</a>
-	<a href="${pageContext.request.contextPath}/article/list.do">[게시물 보기]</a>
 																	
 </u:isLogin>
 <u:notLogin>															<!-- u 접두어를 사용하여 tags에 있는 사용자지정 태그를 불러온다. -->
 																		<!-- notLogin은 로그인 하지 않은 상태에서 볼 수 있는 목록을 띄운다. -->
 	<a href="${pageContext.request.contextPath}/login.do">[로그인하기]</a>
 	<a href="${pageContext.request.contextPath}/join.do">[회원가입하기]</a>
-	<a href="${pageContext.request.contextPath}/article/list.do">[게시물 보기]</a>
 
 </u:notLogin>
 

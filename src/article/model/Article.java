@@ -2,10 +2,10 @@ package article.model;
 
 public class Article {
 	
-	private Integer number;
-	private Writer writer;
-	private String title;
-	private int readCount;
+	private Integer number; // 게시글 번호
+	private Writer writer;  // 작성자
+	private String title;   // 게시들 제목
+	private int readCount;  // 읽은사람 수
 	
 	public Article(Integer number,Writer writer, String title,
 			int readCount) {
@@ -32,3 +32,4 @@ public class Article {
 	}
 	
 }
+

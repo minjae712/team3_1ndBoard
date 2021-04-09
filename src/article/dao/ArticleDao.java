@@ -128,6 +128,7 @@ public class ArticleDao {
 						"update article set title = ?"+
 						"where article_no = ?")) {
 			pstmt.setString(1, title);
+			pstmt.setInt(2, no);
 			return pstmt.executeUpdate();
 		}
 	}

@@ -5,12 +5,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.min.css">
 <title>게시글 읽기</title>
 </head>
 <body style="background: #fffcf6">
+		<!-- 변수 pageNo에 파라미터로 받은 pageNO을 담아주고 만약 pageNo이 없다면 1을 값으로 한다. -->
 		 	<c:set var="pageNo" value="${empty param.pageNo ? '1' : param.pageNo}" />
 		<a href="list.do?pageNo=${pageNo}">[목록]</a>
-    <table border="1" style="width: 75%; position: absolute;">
+    <table class="table table-bordered" border="1" style="width: 75%; position: absolute;">
         <tr>
             <td colspan="2"><c:out value="${articleData.article.title}"></c:out></td>
         </tr>
@@ -36,3 +38,4 @@
 	</table>
 </body>
 </html>
+
