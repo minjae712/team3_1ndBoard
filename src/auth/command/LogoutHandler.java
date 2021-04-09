@@ -15,7 +15,7 @@ public class LogoutHandler implements CommandHandler {
 		if (session != null) {
 			session.invalidate(); // 로그아웃시 세션이 무효화된다.
 		}
-		res.sendRedirect(req.getContextPath() + "/index.jsp"); // 로그아웃하고 index.jsp로 페이지 리다이렉트
+		res.sendRedirect(req.getContextPath() + "/article/list.do"); // 로그아웃하고 index.jsp로 페이지 리다이렉트
 		return null;
 	}
 }

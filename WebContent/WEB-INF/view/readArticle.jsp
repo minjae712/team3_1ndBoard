@@ -12,7 +12,7 @@
 		<!-- 변수 pageNo에 파라미터로 받은 pageNO을 담아주고 만약 pageNo이 없다면 1을 값으로 한다. -->
 		 	<c:set var="pageNo" value="${empty param.pageNo ? '1' : param.pageNo}" />
 		<a href="list.do?pageNo=${pageNo}">[목록]</a>
-    <table class="table table-bordered" border="1" style="width: 75%; position: absolute;">
+    <table class="table table-bordered" style="width:75%; position: absolute;">
         <tr>
             <td colspan="2"><c:out value="${articleData.article.title}"></c:out></td>
         </tr>
@@ -26,7 +26,7 @@
             <u:pre value="${articleData.content}"/></td>
         </tr>
         <tr>
-		<td colspan="2"m>
+		<td colspan="2">
 			<!-- 목록으로 돌아갈 링크를 출력한다. -->
 			<!-- 게시글 작성자 아이디와 로그인 한 사용자 아이디가 동일하면 게시글 수정과 삭제 링크를 출력한다. -->
 		 	<c:if test="${authUser.id == articleData.article.writer.id}">

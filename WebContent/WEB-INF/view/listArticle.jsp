@@ -9,7 +9,7 @@
 </head>
 <body>
  
-	<table class="table table-striped" >											<!-- 테이블 형식을 만든다. -->
+	<table class="table table-striped" style="width: 75%; position: absolute; >											<!-- 테이블 형식을 만든다. -->
 	<tr><td colspan="4"><a class="btn btn-default" href="write.do"><b>게시글쓰기</b></a></td></tr>
 																					<!-- 만든 테이블 형식에  tr로 행(row)을 생성하고 td로 4칸짜리 열을 만든 후 링크를 건다. -->
 	<tr><td>번호</td><td>제목</td><td>작성자</td><td>조회수</td></tr>						<!-- 각 번호,제목,작성자,조회수 의 열(column)을 형성해 4개의 열을 만든다. -->

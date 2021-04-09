@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.min.css">
 <title>게시글 수정</title>
 </head>
 <!-- 게시글 수정 폼을 보여주는 modifyform.jsp 파일이며
@@ -12,18 +13,15 @@
 <body>
 <form action="modify.do" method="post">
 <input type="hidden" name="no" value="${modReq.articleNumber}">
-<p>
-	번호:<br/>${modReq.articleNumber}
-</p>
-<p>
-	제목:<br/><input type="text" name="title" value="${modReq.title}">
+<div class="form-group">
+	제목:<br/><input type="text" name="title" class="form-control" style="width: 40%" value="${modReq.title}">
 	<c:if test="${errors.title}">제목을 입력하세요.</c:if>
-</p>
-<p>
+</div>
+<div class="form-group">
 	내용:<br/>
-	<textarea name="content" rows="5" cols="30">${modReq.content}</textarea>
-</p>
-<input type="submit" value="글 수정">
+	<textarea name="content" class="form-control" style="width: 40%" rows="5" cols="30">${modReq.content}</textarea>
+</div>
+<button type="submit" class="btn btn-default">수정</button>
 </form>
 </body>
 </html>
