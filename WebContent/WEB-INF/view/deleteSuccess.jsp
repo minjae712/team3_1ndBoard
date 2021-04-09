@@ -9,6 +9,7 @@ div{
 </style>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.min.css">
 <title>게시글 삭제</title>
+<meta http-equiv="refresh" content="0;url=list.do">
 </head>
 <body>
 <div></div>
