@@ -26,7 +26,7 @@
             <u:pre value="${articleData.content}"/></td>
         </tr>
         <tr>
-		<td colspan="2">
+		<td colspan="2"m>
 			<!-- 목록으로 돌아갈 링크를 출력한다. -->
 			<!-- 게시글 작성자 아이디와 로그인 한 사용자 아이디가 동일하면 게시글 수정과 삭제 링크를 출력한다. -->
 		 	<c:if test="${authUser.id == articleData.article.writer.id}">
