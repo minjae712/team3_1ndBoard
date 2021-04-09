@@ -3,29 +3,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.min.css">
+<style>
+body{
+	margin-top: 5%;
+}
+</style>
+
 <title>가입</title>
 </head>
 <body>
-<form action="join.do" method="post">
+<center>
+<form class="form-inline" action="join.do" method="post">
+<div class="form-group" align="center">
 <p>
-	아이디:<br/><input type="text" name="id" value="${param.id}">
+	<label for="exampleInputName2">ID</label>
+	<br/><input type="text" name="id" value="${param.id}" class="form-control" placeholder="ID">
 	<c:if test="${errors.id}">ID를 입력하세요.</c:if>
-	<c:if test="${errors.duplicateId}">이미 사용중인 아이디입니다.</c:if>
+	<c:if test="${errors.duplicateId}">이미 사용중인 ID입니다.</c:if>
 </p>
+</div>
+<br>
+<div class="form-group" align="center">
 <p>
-	이름:<br/><input type="text" name="name" value="${param.name}">
+	<label for="exampleInputName2">이름</label>
+	<br/><input type="text" name="name" value="${param.name}" class="form-control" placeholder="이름">
 	<c:if test="${errors.name}">이름을 입력하세요.</c:if>
 </p>
+</div>
+<br>
+<div class="form-group" align="center">
 <p>
-	암호:<br/><input type="password" name="password">
-	<c:if test="${errors.password}">암호를 입력하세요.</c:if>
+	<label for="exampleInputName2">비밀번호</label>
+	<br/><input type="password" name="password" class="form-control" placeholder="비밀번호">
+	<c:if test="${errors.password}">비밀번호를 입력하세요.</c:if>
 </p>
+</div>
+<br>
+<div class="form-group" align="center">
 <p>
-	확인:<br/><input type="password" name="confirmPassword">
+	<label for="exampleInputName2">비밀번호 확인</label>
+	<br/><input type="password" name="confirmPassword" class="form-control" placeholder="비밀번호 확인">
 	<c:if test="${errors.confirmPassword}">확인을 입력하세요.</c:if>
 	<c:if test="${errors.notMatch}">암호와 확인이 일치하지 않습니다.</c:if>
 </p>
-<input type="submit" value="가입">
+</div>
+<br>
+<input class="btn btn-default" type="submit" value="가입">
+<a class="btn btn-default" href="${pageContext.request.contextPath}/index.jsp">취소</a>
+</center>
 </form>
 </body>
 </html>

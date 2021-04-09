@@ -2,23 +2,41 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap-3.3.2-dist/css/bootstrap.min.css">
 <head>
+<style>
+body{
+	margin-top: 10%;
+}
+</style>
 <title>로그인</title>
 </head>
 <body>
-<form action="login.do" method="post">
+<center>
+<form class="form-inline" action="login.do" method="post" >
 <c:if test="${errors.idOrPwNotMatch}">
 아이디와 암호가 일치하지 않습니다.
 </c:if>
+<div class="form-group" align="center">
 <p>
-	아이디:<br/><input type="text" name="id" value="${param.id}">
+	<label for="exampleInputName2">아이디 </label>
+	<br/><input type="text" name="id" value="${param.id}" class="form-control" placeholder="ID">
 	<c:if test="${errors.id}">ID를 입력하세요.</c:if>
 </p>
+</div>
+<br>
+<div class="form-group" align="center">
 <p>
-	암호:<br/><input type="password" name="password">
-	<c:if test="${errors.password}">암호를 입력하세요.</c:if>
+	<label for="exampleInputName2">비밀번호 </label>
+	<br/><input type="password" name="password" class="form-control" placeholder="비밀번호">
+	<c:if test="${errors.password}">비밀번호를 입력하세요.</c:if>
 </p>
-<input type="submit" value="로그인">
+<br>
+</div>
+<br>
+<input class="btn btn-default" type="submit" value="로그인">
+<a class="btn btn-default" href="${pageContext.request.contextPath}/index.jsp">취소</a>
 </form>
+</center>
 </body>
 </html>
