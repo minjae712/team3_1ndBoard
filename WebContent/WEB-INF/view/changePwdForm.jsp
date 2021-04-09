@@ -19,8 +19,8 @@ body{
 <p>
 	<label for="exampleInputName2">현재 비밀번호</label>
 	<br/><input type="password" name="curPwd" class="form-control" placeholder="현재 비밀번호">
-	<c:if test="${errors.curPwd}">현재 비밀번호를 입력하세요.</c:if>
-	<c:if test="${errors.badCurPwd}">현재 비밀번호가 일치하지 않습니다.</c:if>
+	<c:if test="${errors.curPwd}"><br>현재 비밀번호를 입력하세요.</c:if>
+	<c:if test="${errors.badCurPwd}"><br>현재 비밀번호가 일치하지 않습니다.</c:if>
 </p>
 </div>
 <br>
@@ -29,7 +29,7 @@ body{
 <p>
 	<label for="exampleInputName2">새 비밀번호 </label>
 	<br/><input type="password" name="newPwd" class="form-control" placeholder="새 비밀번호">
-	<c:if test="${errors.newPwd}">새 비밀번호를 입력하세요.</c:if>
+	<c:if test="${errors.newPwd}"><br>새 비밀번호를 입력하세요.</c:if>
 </p>
 <br>
 <input class="btn btn-default" type="submit" value="암호 변경">

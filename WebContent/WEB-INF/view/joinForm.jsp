@@ -19,8 +19,8 @@ body{
 <p>
 	<label for="exampleInputName2">ID</label>
 	<br/><input type="text" name="id" value="${param.id}" class="form-control" placeholder="ID">
-	<c:if test="${errors.id}">ID를 입력하세요.</c:if>
-	<c:if test="${errors.duplicateId}">이미 사용중인 ID입니다.</c:if>
+	<c:if test="${errors.id}"><br>ID를 입력하세요.</c:if>
+	<c:if test="${errors.duplicateId}"><br>이미 사용중인 ID입니다.</c:if>
 </p>
 </div>
 <br>
@@ -28,7 +28,7 @@ body{
 <p>
 	<label for="exampleInputName2">이름</label>
 	<br/><input type="text" name="name" value="${param.name}" class="form-control" placeholder="이름">
-	<c:if test="${errors.name}">이름을 입력하세요.</c:if>
+	<c:if test="${errors.name}"><br>이름을 입력하세요.</c:if>
 </p>
 </div>
 <br>
@@ -36,7 +36,7 @@ body{
 <p>
 	<label for="exampleInputName2">비밀번호</label>
 	<br/><input type="password" name="password" class="form-control" placeholder="비밀번호">
-	<c:if test="${errors.password}">비밀번호를 입력하세요.</c:if>
+	<c:if test="${errors.password}"><br>비밀번호를 입력하세요.</c:if>
 </p>
 </div>
 <br>
@@ -44,8 +44,8 @@ body{
 <p>
 	<label for="exampleInputName2">비밀번호 확인</label>
 	<br/><input type="password" name="confirmPassword" class="form-control" placeholder="비밀번호 확인">
-	<c:if test="${errors.confirmPassword}">확인을 입력하세요.</c:if>
-	<c:if test="${errors.notMatch}">암호와 확인이 일치하지 않습니다.</c:if>
+	<c:if test="${errors.confirmPassword}"><br>확인을 입력하세요.</c:if>
+	<c:if test="${errors.notMatch}"><br>암호와 확인이 일치하지 않습니다.</c:if>
 </p>
 </div>
 <br>

@@ -20,7 +20,7 @@ body{
 <p>
 	<label for="exampleInputName2">제목</label>
 	<br/><input type="text" name="title" value="${param.title}" class="form-control" placeholder="제목을 입력해주세요" style="width:300px">
-	<c:if test="${errors.title}">제목을 입력하세요.</c:if>
+	<c:if test="${errors.title}"><br>제목을 입력하세요.</c:if>
 </p>
 </div>
 <br>

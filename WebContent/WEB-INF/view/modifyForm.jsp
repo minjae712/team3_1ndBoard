@@ -29,7 +29,7 @@ body{
 <p>
 	<label for="exampleInputName2">제목 </label>
 	<br/><input type="text" name="title" value="${modReq.title}" class="form-control" placeholder="제목을 입력해주세요" style="width:500px">
-	<c:if test="${errors.title}">제목을 입력하세요.</c:if>
+	<c:if test="${errors.title}"><br>제목을 입력하세요.</c:if>
 </p>
 </div>
 <div class="form-group" align="center">
