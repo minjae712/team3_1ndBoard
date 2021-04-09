@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<meta http-equiv="Refresh" content="1; url=/team3board/article/list.do"/>
+<meta http-equiv="Refresh" content="1; url=/team3board/index.jsp"/>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
